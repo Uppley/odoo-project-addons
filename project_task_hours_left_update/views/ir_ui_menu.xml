@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record model="ir.actions.act_window" id="action_hour_left_updates_form">
+    <field name="context">{'search_default_task_id': active_id,'default_task_id': active_id}</field>
+    <field name="domain">[('task_id', '=', active_id)]</field>
+    <field name="name">hour left updates</field>
+    <field name="res_model">project.task.hour.left.update</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="view_mode">tree,form</field>
+    <field name="view_type">form</field>
+  </record>
+
+  <record model="ir.actions.act_window" id="project_task_hour_left_update">
+    <field name="name">Task Hour Left Updates</field>
+    <field name="res_model">project.task.hour.left.update</field>
+    <field name="view_mode">tree,form</field>
+    <field name="view_type">form</field>
+  </record>
+
+  <record model="ir.ui.menu" id="project_task_hour_left_update_menu">
+    <field name="action" ref="project_task_hour_left_update"/>
+    <field name="name">Task Hour Left Updates</field>
+    <field name="parent_id" ref="project.menu_project_config"/>
+    <field name="sequence">4</field>
+  </record>
+
+</odoo>
